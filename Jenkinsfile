@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         REGISTRY = 'localhost:5000'
-        IMAGE_NAME = 'my-app'
-        FULL_IMAGE_NAME = "${REGISTRY}/${IMAGE_NAME}:${env.BUILD_ID}"
+        IMAGE_NAME = 'calculator'
+        FULL_IMAGE_NAME = "${REGISTRY}/${IMAGE_NAME}:${env.BUILD_ID}.0"
     }
     stages {
         stage('Build Image') {
